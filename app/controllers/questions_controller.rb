@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 
     if @ask == "I am going to work"
       @answer = "Great!"
-    elsif @ask == /\?$/
+    elsif @ask.match?(/\?$/)
       @answer = "Silly question, get dressed and go to work!"
     else
       @answer = "I don't care, get dressed and go to work!"
